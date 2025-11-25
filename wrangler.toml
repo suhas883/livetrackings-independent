@@ -1,0 +1,14 @@
+name = "livetrackings-independent"
+type = "javascript"
+account_id = ""
+workers_dev = true
+
+route = ""
+zone_id = ""
+
+[env.production]
+vars = {}
+
+[env.development]
+route = "dev.example.com/*"
+vars = {}
