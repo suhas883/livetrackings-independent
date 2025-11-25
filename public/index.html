@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveTrackings - Independent Deployment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .status {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            color: #2e7d32;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .features {
+            text-align: left;
+            margin: 30px 0;
+        }
+        .features h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            color: #555;
+        }
+        .feature-item::before {
+            content: "✓";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        .links {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .btn-secondary {
+            background: #f5f5f5;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        .btn-secondary:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 LiveTrackings</h1>
+        <p>Independent Deployment on Cloudflare</p>
+        
+        <div class="status">
+            ✓ Deployed Successfully!
+        </div>
+        
+        <div class="features">
+            <h2>Why Independent?</h2>
+            <div class="feature-item">100% GitHub-hosted</div>
+            <div class="feature-item">Cloudflare Pages (Free Hosting)</div>
+            <div class="feature-item">Full Code Control</div>
+            <div class="feature-item">No Vendor Lock-in</div>
+            <div class="feature-item">Automatic Deployments</div>
+            <div class="feature-item">Custom Domain Support</div>
+        </div>
+        
+        <div class="links">
+            <a href="https://github.com/suhas883/livetrackings-independent" class="btn btn-primary">View on GitHub</a>
+            <a href="#" class="btn btn-secondary">Documentation</a>
+        </div>
+        
+        <footer>
+            <p>Independent | Owned by You | Hosted on Cloudflare</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Deployed at: <strong id="deploy-time"></strong></p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('deploy-time').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
